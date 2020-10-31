@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar
+web:    java $JAVA_OPTS -jar target/classes/static/index.html
