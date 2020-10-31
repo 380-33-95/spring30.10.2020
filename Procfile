@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar target/classes/static/index.html
+web:    java $JAVA_OPTS -jar target/test30.10.2020-0.0.1-SNAPSHOT.ar

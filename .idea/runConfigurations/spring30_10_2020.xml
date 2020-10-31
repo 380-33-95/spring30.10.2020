@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="spring30.10.2020" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="sprboot.config.Application" />
+    <module name="test30.10.2020" />
+    <shortenClasspath name="MANIFEST" />
+    <method v="2">
+      <option name="MakeProject" enabled="true" />
+    </method>
+  </configuration>
+</component>
