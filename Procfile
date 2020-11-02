@@ -1,1 +1,1 @@
-web:    java -jar target/test30.10.2020-0.0.1-SNAPSHOT.jar
+web: java $JAVA_OPTS -jar artifacts/webapp-runner.jar --port $PORT artifacts/test.war

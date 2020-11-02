@@ -5,7 +5,7 @@
 <modelVersion>4.0.0</modelVersion>
 <groupId>org.example</groupId>
 <artifactId>test30.10.2020</artifactId>
-<version>0.0.1-SNAPSHOT</version>
+<version>0.0.1</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -17,24 +17,56 @@
         <defaultGoal>package</defaultGoal>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
+
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.1.1</version>
+                    <executions>
+                        <execution>
+                            <phase>
+                                package
+                            </phase>
+                              <configuration>
+                                    <artifactItems>
+                                    <artifactItem>
+                                        <groupId>com.heroku</groupId>
+                                        <artifactId>webapp-runner</artifactId>
+                                        <version>9.0.31.0</version>
+                                        <destFileName>webapp-runner.jar</destFileName>
+                                    </artifactItem>
+                                </artifactItems>
+                                <outputDirectory>artifacts</outputDirectory>
+                              </configuration>
+                        </execution>
+           </executions>
+        </plugin>
+
             <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.3</version>
                 <configuration>
-                    <goal>jar:inplace</goal>
-                                        <outputDirectory>artifacts</outputDirectory>
+                        <goal>war:inplace</goal>
+                        <outputDirectory>artifacts</outputDirectory>
+
                 </configuration>
             </plugin>
-        </plugins>
+
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.0</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+
     </build>
+
+
 
 
 
