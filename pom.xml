@@ -88,6 +88,11 @@
         <version>1.5.8.RELEASE</version>
     </dependency>
 
+    <dependency>
+        <groupId>jstl</groupId>
+        <artifactId>jstl</artifactId>
+        <version>1.2</version>
+    </dependency>
 
     <!-- https://mvnrepository.com/artifact/com.heroku.sdk/heroku-maven-plugin -->
     <dependency>
